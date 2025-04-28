@@ -158,17 +158,17 @@ header > div > img {
     .divFoot {
         margin: 0rem 0rem 5rem 0rem;
     }
-    .divFoot > article > section > img {
+    .divFoot > article > section > div > img {
         width: 700px;
     }
 }
 @media (max-width: 720px){
-    .divFoot > article > section > img {
+    .divFoot > article > section > div > img {
         width: 500px;
     }
 }
 @media (max-width: 640px){
-    .divFoot > article > section > img {
+    .divFoot > article > section > div > img {
         width: 300px;
     }
 }
