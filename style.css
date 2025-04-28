@@ -1,0 +1,174 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+*::selection {
+    background-color: rgb(207, 232, 255);
+}
+.dark *::selection {
+    background-color: rgb(127, 181, 243);
+}
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+
+h1, p {
+    font-family: Inter, 'sans-serif';
+}
+button, img {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+button {
+    border: none;
+    border-radius: var(--curva);
+}
+button:hover {
+    cursor: pointer;
+}
+
+:root {
+    --curva: .25rem;
+}
+
+.dark {
+    background-color: #121212;
+    color: white;
+}
+.light {
+    background-color: whitesmoke;
+    color: black;
+}
+.backgroundDark {
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+.backgroundLight {
+    background-color: rgb(210, 210, 210);
+    color: rgb(41, 41, 41);
+}
+
+
+header {
+    padding: 1rem;
+}
+header > div {
+    display: flex;
+    justify-content: flex-end;
+}
+header > div > img {
+    cursor: pointer;
+    border-radius: var(--curva);
+    padding: .25rem;
+    background-color: rgb(210, 210, 210);
+}
+.sunInverted, .moonInverted {
+    filter: invert(1);
+}
+#moon {
+    padding: .40rem;
+}
+
+
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 20rem 5rem 20rem;
+    gap: 2.5rem;
+}
+.container > article{
+    display: grid;
+    gap: 1.5rem;
+}
+.container > article > section {
+    margin-left: 2.5rem;
+}
+.container > article > section > button, .container > article > section > p {
+    padding: .20rem;
+}
+.container > article > section > p {
+    flex-wrap: wrap;
+}
+.container > article > section > p > a {
+    color: rgb(76, 106, 139);
+}
+
+
+.divCopyAllSection {
+    display: flex;
+    justify-content: right;
+    padding: 2rem 0rem 3rem 0rem;
+}
+.divCopyAllSection > button {
+    padding: .2rem .5rem .2rem .5rem;
+}
+.divCopyAllSection > button > span {
+    font-size: .85rem;
+    font-weight: 600;
+}
+
+
+
+.divFoot {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem 5rem 0rem;
+}
+.divFoot > article {
+    display: grid;
+    gap: 15rem;
+}
+.divFoot > article > section {
+    display: grid;
+    justify-content: center;
+}
+.divFoot > article > section > button {
+    padding: .2rem .5rem .2rem .5rem;
+}
+.divFoot > article > section > button > span {
+    font-size: .85rem;
+    font-weight: 600;
+}
+.divFoot > article > section > h1 {
+    text-align: center;
+}
+.divFoot > article > section > div {
+    margin: 3rem 0rem 3rem 0rem;
+}
+.divFoot > article > section > div > img {
+    filter: drop-shadow(0rem 0rem 0.4rem rgba(0,0,0,0.1));
+}
+.divFoot > article > section > div > p {
+    text-align: right;
+    font-size: .50rem;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 1024px){
+    .container {
+        margin: 5rem 2rem 5rem 2rem;
+    }
+
+    .divFoot {
+        margin: 0rem 0rem 5rem 0rem;
+    }
+    .divFoot > article > section > img {
+        width: 700px;
+    }
+}
+@media (max-width: 720px){
+    .divFoot > article > section > img {
+        width: 500px;
+    }
+}
+@media (max-width: 640px){
+    .divFoot > article > section > img {
+        width: 300px;
+    }
+}

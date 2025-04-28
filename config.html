@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" href="https://cdn2.steamgriddb.com/icon/e1bd06c3f8089e7552aa0552cb387c92/8/16x16.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>config cs2</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img id="sun" src="https://www.svgrepo.com/show/71693/sun-bright.svg" alt="" width="30px">
+            <img id="moon" src="https://www.svgrepo.com/show/19739/half-moon-shape.svg" alt="" width="25px">
+        </div>
+    </header>
+    <div class="container">
+        <article>
+            <h1>Parámetros de resolución y rendimiento</h1>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-width 1024</span>
+                </button>
+                <p>
+                    Establece el ancho de resolución de la ventana del juego en 1024 píxeles.
+                </p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-height 768</span>
+                </button>
+                <p>Establece la altura de resolución de la ventana del juego en 768 píxeles.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-high</span>
+                </button>
+                <p>Ejecuta el juego con alta prioridad en el sistema operativo, lo cual puede mejorar el rendimiento si hay muchas cosas abiertas.</p>
+            </section>
+            <div class="divCopyAllSection">
+                <button class="copyAllSection"><span class="copyAllSectionSpan"></span></button>
+            </div>
+        </article>
+        <article>
+            <h1>Parámetros visuales y de carga</h1>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-novid</span>
+                </button>
+                <p>Omite el video de introducción al iniciar el juego. Entra más rápido al menú principal.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+cl_forcepreload 1</span>
+                </button>
+                <p>Fuerza al juego a precargar todos los recursos antes de comenzar la partida, para reducir los tirones (stutters) durante el juego.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+mat_queue_mode 2</span>
+                </button>
+                <p>Activa el renderizado en múltiples núcleos (multithreaded rendering). <b>2</b> significa que se habilita automáticamente el mejor modo posible para tu sistema.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+violence_hblood 0</span>
+                </button>
+                <p>Desactiva la sangre humana. Puede dar una mínima mejora de rendimiento y reduce el contenido gráfico violento.</p>
+            </section>
+            <div class="divCopyAllSection">
+                <button class="copyAllSection"><span class="copyAllSectionSpan"></span></button>
+            </div>
+        </article>
+        <article>
+            <h1>Parámetros de red y respuesta</h1>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+cl_interp 0</span>
+                </button>
+                <p>Intenta establecer la interpolación en 0. <b>Cuidado</b>: algunos servidores lo fuerzan a valores mínimos seguros automáticamente (como <b>0.031</b>), así que no siempre queda en 0. Influye en cómo se procesan los datos del servidor y puede afectar la “sensación” del hitreg.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+engine_low_latency_sleep_after_client_tick true</span>
+                </button>
+                <p>Habilita una optimización de latencia en motores más modernos del Source Engine (útil en CS2 por ejemplo). Intenta hacer que la CPU duerma menos después de cada tick, lo que reduce la latencia.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-tickrate 128</span>
+                </button>
+                <p>Establece la tasa de actualización de los servidores locales (offline) a 128 ticks por segundo en CS2. Aunque Valve usa un sistema llamado <i>sub-tick updates</i> en sus servidores oficiales.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+rate 196608</span>
+                </button>
+                <p>Configura la cantidad máxima de datos que el cliente puede recibir del servidor, medido en bytes por segundo. El valor <b>196608</b> es óptimo para conexiones modernas y garantiza la mejor sincronización posible, tanto en servidores oficiales de Valve como en servidores de 128 ticks. Se calcula multiplicando 1536 bytes por 128 actualizaciones por segundo: 1536 × 128 = 196608. Más información en <a target="_blank" href="https://developer.valvesoftware.com/wiki/Source_Multiplayer_Networking">la documentación oficial de Valve</a>.</p>
+            </section>
+            <div class="divCopyAllSection">
+                <button class="copyAllSection"><span class="copyAllSectionSpan"></span></button>
+            </div>
+        </article>
+        <article>
+            <h1>Parámetros de control y entrada</h1>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-nojoy</span>
+                </button>
+                <p>Desactiva el soporte para joysticks/controladores, lo que puede ahorrar algo de recursos.</p>
+            </section>
+            <div class="divCopyAllSection">
+                <button class="copyAllSection"><span class="copyAllSectionSpan"></span></button>
+            </div>
+        </article>
+        <article>
+            <h1>Otros</h1>
+            <section>
+                <button class="copy">
+                    <span title="copiar">-allow_third_party_software</span>
+                </button>
+                <p>Permite el uso de software de terceros, como overlays (Discord, OBS, ReShade, etc.). En algunos juegos es necesario para evitar conflictos con grabadores o programas externos.</p>
+            </section>
+            <section>
+                <button class="copy">
+                    <span title="copiar">+disconnect</span>
+                </button>
+                <p>Hace que el juego desconecte automáticamente de cualquier servidor en el que estés al abrirlo. Es útil si te quedaste “pegado” a un servidor o si el juego crashea por eso.</p>
+            </section>
+            <div class="divCopyAllSection">
+                <button class="copyAllSection"><span class="copyAllSectionSpan"></span></button>
+            </div>
+        </article>
+    </div>
+    <div class="divFoot">
+        <article>
+            <section>    
+                <button id="copyAllSections">
+                    <span id="copyAllSectionsSpan"></span>
+                </button>
+            </section>
+            <section>
+                <h1>¿Dónde pegar los parámetros?</h1>
+                <div>
+                    <img src="https://help.winternode.com/assets/images/Valheim-Steam-Launcher-Parameter-connect-75a8fc1b45e2d27644662c06c712ee5e.webp" alt="Imagen a modo de ejemplo">
+                    <p>*Imagen a modo de referencia.</p>
+                </div>
+            </section>
+        </article>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
